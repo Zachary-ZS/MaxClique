@@ -45,3 +45,9 @@ Heuristic solution for solving max clique problem.
 ![](wei-code.png)
 
 此外，蔡少伟老师自己实现的code见于`Cai-numvc.cpp`、`Cai-tsewf.h`中。
+
+### Later Updated：
+
+&emsp;&emsp;(2019.1.16)
+
+Finally implemented, and the score can easily reach (155/156).
