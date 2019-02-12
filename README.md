@@ -25,13 +25,13 @@ Heuristic solution for solving max clique problem.
 [Cai, Shaowei, Kaile Su, and Abdul Sattar. "Local search with edge weighting and configuration checking heuristics for minimum vertex cover." *Artificial Intelligence* 175.9-10 (2011): 1672-1696.](https://www.sciencedirect.com/science/article/pii/S0004370211000427)
 
 
-### Added by 张苏：
+### Added by Zachary：
 
-&emsp;&emsp;Trying to 实现蔡少伟老师13年发的paper的NuMVC算法，论文里展示的效果来看是要比EWLS和EWCC好的。目前我的进度拖了...只写了一点，后面得等考完操统再继续了.下面把论文的内容总结出来，大家这两天有时间的也可以看明白了接着写一下。
+&emsp;&emsp;Trying to 实现蔡少伟老师13年发的paper的NuMVC算法，论文里展示的效果来看是要比EWLS和EWCC好的。论文的内容总结如下：
 
 首先论文链接：[Shaowei Cai, Kaile Su, Chuan Luo, Abdul Sattar. NuMVC: An Efficient Local Search Algorithm for Minimum Vertex Cover](https://arxiv.org/abs/1402.0584)
 
-主要定义也与EWLS一样，也是对每个边加上权重，包括`cost(G,X)`、`dscore(v)`这些定义也一样，过程是一个`Two-Stage Exchange(TSE)`和一个`Edge Weighting with Forgetting`，就是一个分两个阶段的变换和边权值的遗忘机制（遗忘机制我觉得可能可以直接加到EWLS里面试试效果）
+主要定义也与EWLS一样，也是对每个边加上权重，包括`cost(G,X)`、`dscore(v)`这些定义也一样，过程是一个`Two-Stage Exchange(TSE)`和一个`Edge Weighting with Forgetting`，即一个分两个阶段的变换和边权值的遗忘机制（遗忘机制觉得可以直接加到EWLS里面试试效果）
 
 ##### 1. TSE:
 在每次迭代中， NuMVC首先选择具有最高dscore的顶点u∈C并将其移除。 之后，NuMVC 随机选择一个未覆盖边e，并选择e的满足一定的[条件](#1)的端点中dscore较大的点加入C中.
